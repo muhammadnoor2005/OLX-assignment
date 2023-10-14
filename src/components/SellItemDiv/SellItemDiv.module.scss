@@ -1,0 +1,37 @@
+$themeColor:#002F34;
+
+.sellItemDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vw;
+    border-bottom: #A3B4B6 solid 1px;
+    width: 100%;
+    cursor: pointer;
+    .sellItemFirstDiv{
+        display: flex;
+        align-items: center;
+        img{
+            height: 2.2vw;
+        }
+        span{
+            margin-left: 1.5vw;
+            font-size: 0.9rem;
+            color: $themeColor;
+        }
+        // marign
+    }
+    &:hover{
+        background-color: #C8F8F6;
+    }
+}
+
+
+
+.arrowForw{
+    img{
+        rotate: -90deg;
+        height: 1.4vw;
+    }
+    
+}

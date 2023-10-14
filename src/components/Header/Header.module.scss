@@ -1,0 +1,404 @@
+$fontSize:0.8rem;
+$themeColor:#002F34;
+%motorProperty{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+%nextButtonProperty{
+    margin-top: 2.5vw;
+    height:3.5vw ;
+    border: none;
+    border-radius: 3px;
+}
+%createPassButton{
+    border: none;
+    border-radius: 3px;
+    width: 90%;
+    height: 4vw;
+}
+
+.header{
+    position: sticky;
+    top: 0;
+    background-color: #f7f8f8;
+    z-index: 6;
+    border-bottom: 0 solid #f2f4f5;
+    padding: 1vw 9vw ;
+}
+.upperDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 24vw;
+}
+.upperDiv img{
+    height: 1.4vw;
+    width: 2.4vw;
+}
+
+
+
+.motor{
+    @extend %motorProperty;
+    :hover{
+        color: #3A77FF;
+    }
+
+    img{
+        margin-right: 1vw;
+        height: 1.5vw;
+        width: 1.5vw;
+    }
+
+    span{
+        font-size: $fontSize;
+    }
+}
+
+
+.property{
+    @extend %motorProperty;
+    :hover{
+        color: #3A77FF;
+    }
+
+    img{
+        height: 2.3vw;
+    }
+
+    span{
+        font-size: $fontSize;
+    }
+}
+
+.lowerDiv{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        height: 2.8vw;
+    }
+
+    .loginLink{
+        text-decoration: none;
+        color: $themeColor;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+}
+
+.locationInput{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    border: 2px solid $themeColor;
+    border-radius: 3px;
+    padding: 0.9vw 0.7vw;
+    width: 20vw;
+
+    input{
+        border: none;
+        outline: none;
+    }
+
+    .locationSearchIcon{
+        height: 2.5vh;
+    }
+    .arrowDown{
+        cursor: pointer;
+        height: 2vh;
+    }
+}
+
+.itemSearchBox{
+    background-color: white;
+    border: 2px solid $themeColor;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 3px;
+    width: 37vw;
+
+    input{
+        border: none;
+        outline: none;
+        padding: 1vw;
+        width: 100%;
+    }
+
+    .itemSearchButton{
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $themeColor;
+        padding: 0.7vw 1vw;
+
+        img{
+            height: 1.5vw;
+        }
+    }
+}
+
+.sellButton{
+    position: relative;
+    button{
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+        cursor: pointer;
+    }
+}
+
+.sellButtonBg{
+    min-height: 4vw;
+}
+
+.sellText{
+    font-size: 1.2vw;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 1.5vw;
+    left: 2.8vw;
+    span{
+        color: $themeColor;
+        font-weight: 600;
+    }
+    img{
+        height: 1vw;
+    }
+}
+
+
+.loginOptionsBg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: calc(100vmin);
+    width: 100%;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loginOptionsDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // overflow-y: scroll;
+    width: 25rem;
+    max-height:85% ;
+    padding: 1vw;
+    border-radius: 4px;
+    background-color: white;
+
+    .loginBoxUpperPart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $themeColor;
+        h1{
+            font-size: 1.5vw;
+        }
+        span{
+            font-size: 1.5vw;
+            text-align: center;
+        }
+    }
+
+}
+.loginBoxCross{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    img{
+        height: 2vw;
+        cursor: pointer;
+    }
+}
+.loginOptions{
+    color: $themeColor;
+    font-weight: 500;
+    width: 100%;
+    div{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px $themeColor solid;
+        padding: 0.7vw ;
+        margin: 1vw;
+        border-radius: 4px;
+        cursor: pointer;
+        &:hover{
+            border-width: 4px;
+        }
+        img{
+            height: 2vw;
+        }
+    }
+    span{
+        margin-left: 1vw;
+        font-weight: 600;
+    }
+}
+.loginOptionsLowerDiv{
+    text-align: center;
+    font-size: 2vmin;
+    color: #5C7A7D;
+    
+    span{
+        color:#3A77FF;
+        cursor: pointer;
+
+    }
+}
+
+
+.loginOptionsBgHide{
+    display: none;
+}
+
+.emailLoginDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    padding: 1vw;
+    height: 70%;
+    width: 63vmin;
+    border-radius: 5px;
+    .backCrossButton{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        img{
+            height: 2vw;
+            cursor: pointer;
+        }     
+    }
+    .emailLoginDivOlxLogo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2vw;
+        img{
+            height: 7vmin;
+            width: 13vmin;
+        }
+        span{
+            font-size: 1.3rem;
+            color: $themeColor;
+            font-weight: 500;
+        }
+    }
+    .emailInputDiv{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .emailInput{
+            border-color: $themeColor;
+            border-radius: 3px;
+            height: 3.5vw;
+            color: $themeColor;
+        }
+        .nextButtonEnabled{
+            @extend %nextButtonProperty;
+            background-color: $themeColor;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    span{
+        font-size: 0.7rem;
+        text-align: center;
+        color:rgba(0,47,52,.64);
+        margin-top: 2vw;
+    }
+}
+
+.emailLoginDivHide{
+    display: none;
+}
+.loginOptionsDivHide{
+    display: none;
+}
+
+.nextButtonDisabled:disabled{
+    @extend %nextButtonProperty;
+    background-color: rgb(216,223,224);
+    cursor: not-allowed;
+}
+
+.createPasswordDivShow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 80vmin;
+    border-radius: 4px;
+    width: 30vw;
+    padding: 1vw;
+    .createPasswordDivOlxLogo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        span{
+            font-size: 1.3rem;
+            font-weight: 500;
+            text-align: center;
+            color: $themeColor;
+        }
+    }
+    .createPasswordFieldsDiv{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        p{
+            text-align: center;
+            font-size: 0.9rem;
+            color: $themeColor;
+            span{
+                font-weight: bold;
+            }
+        }
+        .createPasswordFeild{
+            border-radius: 3px;
+            border-color: $themeColor;
+            height: 3.5vw;
+            width: 90%;
+        }
+        span{
+            font-size: 0.8rem;
+            color: #194448;
+            margin-left: 1.2vw;
+        }
+    }
+}
+
+.createPassButtonEnabled{
+    @extend %createPassButton;
+    background-color: $themeColor;
+    color: white;
+    cursor: pointer;
+
+}
+.createPassButtonDisabled:disabled{
+    @extend %createPassButton;
+    background-color: rgb(216,223,224);
+    cursor: not-allowed;
+    
+}
+
+.createPasswordDivHide{
+    display: none;
+}
+

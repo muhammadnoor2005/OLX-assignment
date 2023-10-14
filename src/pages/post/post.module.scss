@@ -1,0 +1,62 @@
+$themeColor:#002F34;
+$border:#A3B4B6 solid 1px;
+
+.postPageHeader{
+    height: 10vh;
+    width: 100%;
+    background-color: #F7F8F8;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.1);
+
+    img{
+        height: 4vh;
+        margin-left: 2vw;
+        cursor: pointer;
+    }
+}
+.postYourAd{
+    margin: 2vw;
+    text-align: center;
+    font-size: 1.5vw;
+    font-weight: 500;
+    color: $themeColor;
+}
+.chooseCategoryDiv{
+    border: $border;
+    border-radius: 5px;
+    margin: 2vw 8vw;
+    overflow: hidden;
+    .chooseCategoryyHeading{
+        padding: 1.5vw;
+        font-weight: 500;
+        border-bottom: $border;
+        color:$themeColor;
+    }
+    .sellItemsDiv{
+        display: flex;
+        // justify-content: calc(33%);
+    }
+}
+.chooseCategorySecondDiv{
+    width: 33.3%;
+    margin-left: 2vw;
+    border-left: $border;
+}
+.chooseCategoryThirdDiv{
+    border-left: $border;
+    min-width: 36%;
+    margin-left:2vw ;
+}
+.chooseCategorySecondDivHide{
+    display: none;
+}
+.chooseCategorySecondDivShow{
+    visibility: visible;
+}
+.accessoriesShow{
+    visibility: visible;
+}
+.accessoriesHide{
+    display: none;
+}
